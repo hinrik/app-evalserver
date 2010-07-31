@@ -16,7 +16,7 @@ use POE::Filter::Stream;
 use POE::Wheel::SocketFactory;
 use POE::Wheel::ReadWrite;
 use POE::Wheel::Run;
-use POSIX qw<mkfifo tmpnam>;
+use POSIX qw<mkfifo>;
 use Time::HiRes qw<time>;
 
 my @inc = map { +'-I' => abs_path($_) } @INC;
