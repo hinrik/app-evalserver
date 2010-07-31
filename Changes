@@ -1,6 +1,7 @@
 Revision history for App-EvalServer
 
 {{$NEXT}}
+    - Document the default value of the 'unsafe' option
 
 0.01  Sat Jul 31 03:21:26 GMT 2010
     - Initial release

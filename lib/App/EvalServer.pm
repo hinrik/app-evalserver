@@ -389,7 +389,8 @@ B<'limit'>, resource limit in megabytes (default: 50)
 
 B<'daemonize'>, daemonize the process
 
-B<'unsafe'>, don't chroot or set resource limits (no root needed)
+B<'unsafe'>, don't chroot or set resource limits (no root needed). Default is
+false.
 
 =head2 C<run>
 
