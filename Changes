@@ -1,6 +1,8 @@
 Revision history for App-EvalServer
 
 {{$NEXT}}
+
+0.02  Sat Jul 31 17:51:30 GMT 2010
     - Document the default value of the 'unsafe' option
     - If we can't evaluate the code, only deliver an error message
     - Fix the module name for the PHP backend
