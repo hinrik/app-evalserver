@@ -1,4 +1,4 @@
-package App::EvalServer::Language::Lua;
+package App::EvalServer::Language::PHP;
 
 use strict;
 use warnings;
