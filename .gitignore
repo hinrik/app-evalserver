@@ -1,6 +1,3 @@
-Makefile
-Makefile.old
 App-EvalServer-*
-blib
-pm_to_blib
 cover_db
+.build
