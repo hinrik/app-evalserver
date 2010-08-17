@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
 
 use strict;
-use warnings;
+use warnings FATAL => 'all';
 use App::EvalServer;
 use POE;
 use POE::Filter::JSON;

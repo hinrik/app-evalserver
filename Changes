@@ -1,6 +1,7 @@
 Revision history for App-EvalServer
 
 {{$NEXT}}
+    - Make all warnings fatal
 
 0.02  Sat Jul 31 17:51:30 GMT 2010
     - Document the default value of the 'unsafe' option

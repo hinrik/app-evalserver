@@ -1,7 +1,7 @@
 package App::EvalServer::Child;
 
 use strict;
-use warnings;
+use warnings FATAL => 'all';
 use BSD::Resource;
 use POE::Filter::Reference;
 use POSIX qw<setgid>;
