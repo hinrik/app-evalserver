@@ -1,6 +1,8 @@
 Revision history for App-EvalServer
 
 {{$NEXT}}
+
+0.03  Tue Aug 17 22:50:18 GMT 2010
     - Make all warnings fatal
 
 0.02  Sat Jul 31 17:51:30 GMT 2010
