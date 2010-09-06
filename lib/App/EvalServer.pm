@@ -71,7 +71,7 @@ sub run {
                 _start
                 _shutdown
                 sig_die
-                sig_int
+                fatal_signal
                 server_failure
                 new_client
                 client_read
@@ -104,7 +104,8 @@ sub _start {
 
     $self->{session_id} = $session->ID;
     $kernel->sig(DIE => 'sig_die');
-    $kernel->sig(INT => 'sig_int');
+    $kernel->sig(INT => 'fatal_signal');
+    $kernel->sig(TERM => 'fatal_signal');
     return;
 }
 
@@ -122,7 +123,7 @@ sub sig_die {
     return;
 }
 
-sub sig_int {
+sub fatal_signal {
     my ($kernel, $self) = @_[KERNEL, OBJECT];
     $kernel->yield('_shutdown');
     $kernel->sig_handled();

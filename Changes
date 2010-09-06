@@ -1,6 +1,7 @@
 Revision history for App-EvalServer
 
 {{$NEXT}}
+    - Shut down gracefully on SIGTERM
 
 0.03  Tue Aug 17 22:50:18 GMT 2010
     - Make all warnings fatal
