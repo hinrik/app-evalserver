@@ -5,6 +5,7 @@ use warnings;
 use Getopt::Long qw<:config autohelp no_ignore_case>;
 use App::EvalServer;
 use Pod::Usage;
+use POE;
 
 my %args;
 GetOptions(
@@ -36,9 +37,7 @@ if ($] < 5.013000 && $^O eq 'linux') {
 }
 
 App::EvalServer->new(%args)->run();
-require POE;
-POE->import();
-POE::Kernel->run();
+$poe_kernel->run();
 
 =encoding utf8
 
