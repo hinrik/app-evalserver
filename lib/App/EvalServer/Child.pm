@@ -143,7 +143,7 @@ sub _be_safe {
 
 =head1 NAME
 
-App::EvalServer::Child - Evaluato code in a safe child process
+App::EvalServer::Child - Evaluate code in a safe child process
 
 =head1 SYNOPSIS
 
