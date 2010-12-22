@@ -2,6 +2,7 @@ Revision history for App-EvalServer
 
 {{$NEXT}}
     - After we daemonize, notify the POE kernel that we have forked
+    - Load File::Glob before evaluating Perl code
 
 0.04  Mon Sep 6 04:49:58 GMT 2010
     - Shut down gracefully on SIGTERM

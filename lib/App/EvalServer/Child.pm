@@ -11,6 +11,7 @@ use POSIX qw<setgid>;
 getrusage();
 use Carp::Heavy;
 use Storable 'nfreeze'; nfreeze([]);
+use File::Glob;
 
 my $PIPE;
 my $FILTER;
