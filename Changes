@@ -1,6 +1,7 @@
 Revision history for App-EvalServer
 
 {{$NEXT}}
+    - Return an error when a child process dies before returning a result
 
 0.05  Wed Dec 22 15:02:20 GMT 2010
     - After we daemonize, notify the POE kernel that we have forked

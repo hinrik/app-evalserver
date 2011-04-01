@@ -320,6 +320,9 @@ sub eval_sig_child {
         if ($eval->{return}{error}) {
             $client->put({ error => $eval->{return}{error} });
         }
+        elsif (!exists $eval->{return}{result}) {
+            $client->put({ error => 'Child process died before returning a result.' });
+        }
         else {
             $client->put($eval->{return});
         }
