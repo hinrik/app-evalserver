@@ -6,8 +6,7 @@ use warnings FATAL => 'all';
 # we want instant child process reaping
 sub POE::Kernel::USE_SIGCHLD () { return 1 }
 
-use Cwd 'abs_path';
-use File::Spec::Functions qw<catdir catfile>;
+use File::Spec::Functions qw<catdir catfile rel2abs>;
 use File::Temp qw<tempdir>;
 use POE;
 use POE::Filter::JSON;
@@ -19,7 +18,7 @@ use POE::Wheel::Run;
 use POSIX qw<mkfifo>;
 use Time::HiRes qw<time>;
 
-my @inc = map { +'-I' => abs_path($_) } @INC;
+my @inc = map { +'-I' => rel2abs($_) } @INC;
 my $CHILD_PROGRAM = [
     $^X, @inc, '-MApp::EvalServer::Child',
     '-e', 'App::EvalServer::Child::run()'
