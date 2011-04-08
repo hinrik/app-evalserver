@@ -1,6 +1,8 @@
 Revision history for App-EvalServer
 
 {{$NEXT}}
+
+0.08  Fri Apr 8 12:30:04 GMT 2011
     - Skip all tests if JSON::Any fails to load
 
 0.07  Mon Apr 4 20:16:52 GMT 2011
