@@ -2,12 +2,21 @@
 
 use strict;
 use warnings FATAL => 'all';
+
+use Test::More;
+
+BEGIN {
+    eval "use JSON::Any";
+    plan skip_all => "JSON::Any couldn't be loaded" if $@;
+}
+
 use App::EvalServer;
 use POE;
 use POE::Filter::JSON;
 use POE::Wheel::ReadWrite;
 use Socket;
-use Test::More tests => 3;
+
+plan tests => 3;
 
 POE::Session->create(
     package_states => [
