@@ -332,7 +332,7 @@ sub eval_sig_child {
 
 sub eval_timeout {
     my ($self, $wheel_id) = @_[OBJECT, ARG0];
-    my $wheel = $self->{evals}{$wheel_id};
+    my $wheel = $self->{evals}{$wheel_id}{wheel};
     $wheel->kill();
     return;
 }
